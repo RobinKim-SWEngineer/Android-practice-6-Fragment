@@ -6,7 +6,7 @@ Creating and adding a fragment to the main layout
 When we want to make two different screens, and if they have some **navigational relationship**, we would go for fragment-fragment rather than activity-activity. 
 
 ## Adding a Fragment class
- - When you add a Fragment class, a class that *extends Fragment class* will be generated. Take a look at the overriden `onCreateView(..)` method.
+ - When you add a Fragment class, a class that *extends Fragment class* will be generated with a layout file. Take a look at the overriden `onCreateView(..)` method.
  
     ```
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
