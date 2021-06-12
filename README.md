@@ -29,7 +29,7 @@ When we want to make two different screens, and if they have some **navigational
     ```
 
 ## Adding fragment to the main layout
- - Use <fragment> element in layout file to add the fragment. The name attribute is going to be the name of the Fragment class with it's full path.
+ - Use `<fragment>` element in layout file to add the fragment. The name attribute is going to be the name of the Fragment class with it's full path.
  
     ```
     <fragment
