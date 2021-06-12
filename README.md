@@ -6,7 +6,7 @@ Creating and adding a fragment to the main layout
 When we want to make two different screens, and if they have some **navigational relationship**, we would go for fragment-fragment rather than activity-activity. 
 
 ## Adding a Fragment class
- - When you add a Fragment class, a class that *extends Fragment class* will be generated with a layout file. Take a look at the overriden `onCreateView(..)` method.
+ - When you add a Fragment class, a class that *extends Fragment class* will be generated. Take a look at the overriden `onCreateView(..)` method.
  
     ```
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
@@ -18,7 +18,7 @@ When we want to make two different screens, and if they have some **navigational
     This method returns the root view of **inflated view hierarchy** for the fragment. We are going to replace this method with `DataBindingUtil.inflate(..)` so we can use the *binding object* to the layout.
 
 ## Creating a binding object to Fragment layout
- - Following `DataBinding.inflate(..)` method will **inflate** the layout and **return** the binding object. `binding.root` contains the inflated view.
+ - `DataBinding.inflate(..)` method will **inflate** the layout and **return** the binding object. `binding.root` contains the inflated view.
 
     ```
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
@@ -29,3 +29,11 @@ When we want to make two different screens, and if they have some **navigational
     ```
 
 ## Adding fragment to the main layout
+ - Use <fragment> element in layout file to add the fragment. The name attribute is going to be the name of the Fragment class with it's full path.
+ 
+    ```
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.fragmentpractice.TitleFragment"
+        .. />
+    ```
